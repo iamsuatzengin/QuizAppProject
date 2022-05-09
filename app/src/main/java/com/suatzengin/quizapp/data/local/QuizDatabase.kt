@@ -10,9 +10,10 @@ import com.suatzengin.quizapp.domain.model.User
 
 @Database(
     entities = [(User::class), (Quiz::class), (Question::class), (Answer::class)],
-    version = 1, exportSchema = false,
+    version = 3, exportSchema = false,
 )
 @TypeConverters(Converters::class)
 abstract class QuizDatabase: RoomDatabase() {
     abstract fun userDao(): UserDao
+    abstract fun quizDao(): QuizDao
 }

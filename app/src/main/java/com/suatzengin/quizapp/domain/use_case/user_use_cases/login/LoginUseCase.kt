@@ -6,7 +6,7 @@ import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class LoginUseCase @Inject constructor(
-    val repo: QuizRepository
+    private val repo: QuizRepository
 ) {
     suspend operator fun invoke(mail: String, password: String) = flow{
         emit(Resource.Loading)

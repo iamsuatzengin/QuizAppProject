@@ -2,18 +2,18 @@ package com.suatzengin.quizapp.presentation.login
 
 import android.content.Context
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.snackbar.Snackbar
 import com.suatzengin.quizapp.databinding.FragmentLoginBinding
-import com.suatzengin.quizapp.domain.model.User
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
 
@@ -30,7 +30,7 @@ class LoginFragment : Fragment() {
         val sharedPref = activity?.getSharedPreferences("logged_in", Context.MODE_PRIVATE) ?: return
         val isLoggedIn = sharedPref.getBoolean("isLoggedIn", false)
 
-        if (isLoggedIn){
+        if (isLoggedIn) {
             actionLoginToHome()
         }
     }
@@ -51,8 +51,9 @@ class LoginFragment : Fragment() {
             val action = LoginFragmentDirections.actionLoginToRegister()
             findNavController().navigate(action)
         }
-
-        login()
+        binding.btnSignIn.setOnClickListener {
+            login()
+        }
         observerData()
     }
 
@@ -60,13 +61,11 @@ class LoginFragment : Fragment() {
         val mail = binding.inputLayoutMail.editText?.text
         val password = binding.inputLayoutPassword.editText?.text
 
-        binding.btnSignIn.setOnClickListener {
-            if (mail != null && password != null) {
-                if (mail.isEmpty() || password.isEmpty()) {
-                    Toast.makeText(requireContext(), "Boş olamaz", Toast.LENGTH_LONG).show()
-                } else {
-                    viewModel.login(mail.toString().trim(), password.toString().trim())
-                }
+        if (mail != null && password != null) {
+            if (mail.isEmpty() || password.isEmpty()) {
+                Toast.makeText(requireContext(), "Boş olamaz", Toast.LENGTH_LONG).show()
+            } else {
+                viewModel.login(mail.toString().trim(), password.toString().trim())
             }
         }
     }
@@ -102,7 +101,7 @@ class LoginFragment : Fragment() {
 
     private fun loggedIn(isLoggedIn: Boolean = false) {
         val sharedPref = activity?.getSharedPreferences("logged_in", Context.MODE_PRIVATE) ?: return
-        with(sharedPref.edit()){
+        with(sharedPref.edit()) {
             putBoolean("isLoggedIn", isLoggedIn)
             apply()
         }

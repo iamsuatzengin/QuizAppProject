@@ -3,9 +3,11 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/drawable/custom_input.xml" value="0.135" />
         <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/drawable/header.xml" value="0.145" />
         <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/drawable/login_background.xml" value="0.145" />
         <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/layout/activity_main.xml" value="0.27395833333333336" />
+        <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/layout/fragment_add_question.xml" value="0.25" />
         <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/layout/fragment_home.xml" value="0.27395833333333336" />
         <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/layout/fragment_login.xml" value="0.25" />
         <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/layout/fragment_register.xml" value="0.25" />

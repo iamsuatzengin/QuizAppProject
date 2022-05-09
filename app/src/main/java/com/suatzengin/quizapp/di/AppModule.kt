@@ -2,6 +2,7 @@ package com.suatzengin.quizapp.di
 
 import android.content.Context
 import androidx.room.Room
+import com.suatzengin.quizapp.data.local.QuizDao
 import com.suatzengin.quizapp.data.local.QuizDatabase
 import com.suatzengin.quizapp.data.local.UserDao
 import com.suatzengin.quizapp.data.repository.QuizRepositoryImpl
@@ -27,7 +28,9 @@ object AppModule {
             context.applicationContext,
             QuizDatabase::class.java,
             "quiz_db"
-        ).build()
+        )
+            .fallbackToDestructiveMigration()
+            .build()
     }
 
     @Provides
@@ -38,7 +41,13 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideQuizRepository(userDao: UserDao): QuizRepository{
-        return QuizRepositoryImpl(userDao)
+    fun provideQuizDao(db: QuizDatabase): QuizDao{
+        return db.quizDao()
+    }
+
+    @Provides
+    @Singleton
+    fun provideQuizRepository(userDao: UserDao, quizDao: QuizDao): QuizRepository{
+        return QuizRepositoryImpl(userDao, quizDao)
     }
 }

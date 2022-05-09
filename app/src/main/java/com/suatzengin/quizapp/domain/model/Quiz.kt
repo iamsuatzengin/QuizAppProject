@@ -10,11 +10,11 @@ data class Quiz(
     @ColumnInfo(name = "quiz_id")
     val quizId: Int,
     @ColumnInfo(name = "total_score")
-    val totalScore: Int,
+    val totalScore: Int?,
     @ColumnInfo(name = "total_correct")
-    val totalCorrect: Int,
+    val totalCorrect: Int?,
     @ColumnInfo(name = "total_wrong")
-    val totalWrong: Int,
+    val totalWrong: Int?,
     @ColumnInfo(name = "user_id")
     val userId: Int,
 )

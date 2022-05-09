@@ -11,12 +11,12 @@ data class Question(
     @ColumnInfo(name = "question_id")
     val questionId: Int,
     @ColumnInfo(name = "quiz_id")
-    val quizId: Int,
+    val quizId: Int?,
     val text: String,
     @ColumnInfo(name = "correct_count")
-    val correctCount: Int,
+    val correctCount: Int = 0,
     @ColumnInfo(name = "is_learned")
-    val isLearned: Boolean,
+    val isLearned: Boolean = false,
     @ColumnInfo(name = "next_date")
-    val nextDate: Date
+    val nextDate: Date?
 )
