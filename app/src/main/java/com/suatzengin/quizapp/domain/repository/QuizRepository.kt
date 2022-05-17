@@ -4,6 +4,7 @@ import com.suatzengin.quizapp.data.local.relations.QuestionWithAnswers
 import com.suatzengin.quizapp.data.local.relations.UserWithQuizzes
 import com.suatzengin.quizapp.domain.model.Answer
 import com.suatzengin.quizapp.domain.model.Question
+import com.suatzengin.quizapp.domain.model.Quiz
 import com.suatzengin.quizapp.domain.model.User
 
 interface QuizRepository {
@@ -19,4 +20,8 @@ interface QuizRepository {
     suspend fun insertAnswer(answer: Answer)
 
     fun getQuestionsWithAnswers(): List<QuestionWithAnswers>
+
+    suspend fun insertQuiz(quiz: Quiz)
+
+    suspend fun updateQuiz(quiz: Quiz)
 }

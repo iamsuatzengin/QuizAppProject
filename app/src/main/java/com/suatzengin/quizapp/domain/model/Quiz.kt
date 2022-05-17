@@ -1,10 +1,13 @@
 package com.suatzengin.quizapp.domain.model
 
+import android.os.Parcelable
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import kotlinx.parcelize.Parcelize
 
 @Entity
+@Parcelize
 data class Quiz(
     @PrimaryKey(autoGenerate = true)
     @ColumnInfo(name = "quiz_id")
@@ -17,4 +20,4 @@ data class Quiz(
     val totalWrong: Int?,
     @ColumnInfo(name = "user_id")
     val userId: Int,
-)
+): Parcelable

@@ -24,7 +24,7 @@ class LoginViewModel @Inject constructor(
             loginUseCase(mail, password).collect { result ->
                 when (result) {
                     is Resource.Success -> {
-                        _state.value = LoginState(isLoggedIn = true)
+                        _state.value = LoginState(isLoggedIn = true, userId = result.data.userId)
                     }
                     is Resource.Error -> {
                         _state.value = LoginState(error = result.message)

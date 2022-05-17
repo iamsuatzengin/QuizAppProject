@@ -1,6 +1,5 @@
 package com.suatzengin.quizapp.presentation.login
 
-import android.content.Context
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -12,7 +11,7 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.navigation.fragment.findNavController
-import com.google.android.material.snackbar.Snackbar
+import com.suatzengin.quizapp.common.SharedPref
 import com.suatzengin.quizapp.databinding.FragmentLoginBinding
 import dagger.hilt.android.AndroidEntryPoint
 import kotlinx.coroutines.launch
@@ -27,8 +26,8 @@ class LoginFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val sharedPref = activity?.getSharedPreferences("logged_in", Context.MODE_PRIVATE) ?: return
-        val isLoggedIn = sharedPref.getBoolean("isLoggedIn", false)
+
+        val isLoggedIn = SharedPref.isLoggedIn(requireActivity())
 
         if (isLoggedIn) {
             actionLoginToHome()
@@ -75,10 +74,10 @@ class LoginFragment : Fragment() {
             viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.state.collect { state ->
                     state.isLoggedIn.let { isLoggedIn ->
-                        if (isLoggedIn == true) {
+                        if (isLoggedIn == true && state.userId != null) {
                             Toast.makeText(requireContext(), "Başarılı", Toast.LENGTH_SHORT)
                                 .show()
-                            loggedIn(isLoggedIn)
+                            SharedPref.login(requireActivity(), isLoggedIn, state.userId)
                             actionLoginToHome()
                         }
                     }
@@ -97,15 +96,6 @@ class LoginFragment : Fragment() {
                 }
             }
         }
-    }
-
-    private fun loggedIn(isLoggedIn: Boolean = false) {
-        val sharedPref = activity?.getSharedPreferences("logged_in", Context.MODE_PRIVATE) ?: return
-        with(sharedPref.edit()) {
-            putBoolean("isLoggedIn", isLoggedIn)
-            apply()
-        }
-
     }
 
     private fun actionLoginToHome() {

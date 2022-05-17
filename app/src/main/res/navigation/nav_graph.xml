@@ -34,10 +34,52 @@
         <action
             android:id="@+id/actionAddQuestion"
             app:destination="@id/addQuestionFragment" />
+        <action
+            android:id="@+id/actionToQuizFragment"
+            app:destination="@id/quizFragment" />
     </fragment>
     <fragment
         android:id="@+id/addQuestionFragment"
         android:name="com.suatzengin.quizapp.presentation.add_question.AddQuestionFragment"
         android:label="fragment_add_question"
-        tools:layout="@layout/fragment_add_question" />
+        tools:layout="@layout/fragment_add_question" >
+        <action
+            android:id="@+id/actionToAddAnswerFragment"
+            app:destination="@id/addAnswerFragment" />
+        <action
+            android:id="@+id/actionToHomeFragment"
+            app:destination="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizFragment"
+        android:name="com.suatzengin.quizapp.presentation.quiz.QuizFragment"
+        android:label="fragment_quiz"
+        tools:layout="@layout/fragment_quiz" >
+        <action
+            android:id="@+id/actionToResultFragment"
+            app:destination="@id/resultFragment"
+            app:popUpTo="@id/homeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addAnswerFragment"
+        android:name="com.suatzengin.quizapp.presentation.add_question.add_answer.AddAnswerFragment"
+        android:label="fragment_add_answer"
+        tools:layout="@layout/fragment_add_answer" >
+        <argument
+            android:name="questionId"
+            app:argType="integer" />
+        <action
+            android:id="@+id/actionToAddQuestionFragmentBack"
+            app:destination="@id/addQuestionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.suatzengin.quizapp.presentation.result.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+
+        <argument
+            android:name="quiz"
+            app:argType="com.suatzengin.quizapp.domain.model.Quiz" />
+    </fragment>
 </navigation>
