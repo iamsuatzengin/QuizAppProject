@@ -2,7 +2,6 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#466CAA"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
@@ -15,8 +14,8 @@
         android:gravity="center"
         android:lineSpacingExtra="4dp"
         android:padding="16dp"
-        android:text="Soru metni "
-        android:textColor="@color/white"
+        android:text="Soru metni"
+        android:textColor="@color/black"
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -42,7 +41,7 @@
             android:buttonTint="@color/radioButtonTint"
             android:padding="16dp"
             android:text="deneme cevap 1 deneme cevap 1 "
-            android:textColor="@drawable/color_radio_button" />
+            android:textColor="@color/black" />
 
         <RadioButton
             android:id="@+id/radio_answerB"
@@ -53,7 +52,7 @@
             android:buttonTint="@color/radioButtonTint"
             android:padding="16dp"
             android:text="deneme cevap 2"
-            android:textColor="@drawable/color_radio_button" />
+            android:textColor="@color/black" />
 
         <RadioButton
             android:id="@+id/radio_answerC"
@@ -64,7 +63,7 @@
             android:buttonTint="@color/radioButtonTint"
             android:padding="16dp"
             android:text="deneme cevap 2"
-            android:textColor="@drawable/color_radio_button" />
+            android:textColor="@color/black" />
 
         <RadioButton
             android:id="@+id/radio_answerD"
@@ -75,7 +74,7 @@
             android:buttonTint="@color/radioButtonTint"
             android:padding="16dp"
             android:text="deneme cevap 3"
-            android:textColor="@drawable/color_radio_button" />
+            android:textColor="@color/black" />
     </RadioGroup>
 
     <Button
@@ -84,8 +83,8 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:backgroundTint="@color/colorTextPrimary"
-        android:text="Sonraki"
+        android:backgroundTint="@color/colorPrimary"
+        android:text="@string/next_btn_str"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/rgAnswers" />

@@ -11,14 +11,16 @@
         <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/drawable/radio_group_selector.xml" value="0.114" />
         <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/drawable/radiobutton_background.xml" value="0.144" />
         <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/layout/activity_main.xml" value="0.27395833333333336" />
-        <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/layout/fragment_add_answer.xml" value="0.33" />
+        <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/layout/fragment_add_answer.xml" value="0.25" />
         <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/layout/fragment_add_question.xml" value="0.25" />
         <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/layout/fragment_home.xml" value="0.27395833333333336" />
         <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/layout/fragment_login.xml" value="0.25" />
         <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/layout/fragment_quiz.xml" value="0.29025641025641025" />
         <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/layout/fragment_register.xml" value="0.25" />
-        <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/layout/fragment_result.xml" value="0.33" />
-        <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/layout/quiz_item.xml" value="0.25" />
+        <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/layout/fragment_result.xml" value="0.25" />
+        <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/layout/quiz_home_rv_item.xml" value="0.2911500641299701" />
+        <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/layout/quiz_item.xml" value="0.33" />
+        <entry key="..\:/Users/Suat/Desktop/QuizApp/app/src/main/res/menu/home_menu.xml" value="0.2911500641299701" />
       </map>
     </option>
   </component>
@@ -31,7 +33,7 @@
   <component name="VisualizationToolProject">
     <option name="state">
       <ProjectState>
-        <option name="scale" value="0.33" />
+        <option name="scale" value="0.2911500641299701" />
       </ProjectState>
     </option>
   </component>

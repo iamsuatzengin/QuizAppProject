@@ -6,44 +6,75 @@
     android:layout_height="match_parent"
     tools:context=".presentation.home.HomeFragment">
 
-
-    <TextView
-        android:id="@+id/textView"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvHome"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:text="@string/hello_blank_fragment"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/btnCikis"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="112dp"
-        android:text="@string/log_out"
+    <com.nambimobile.widgets.efab.ExpandableFabLayout
+        android:id="@+id/expandableFabLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/textView"
-        app:layout_constraintTop_toTopOf="@+id/textView" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnAdd"
-        android:text="@string/btn_add"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnCikis"
-        />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <Button
+        <com.nambimobile.widgets.efab.Overlay
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:overlay_orientation="portrait" />
+
+        <com.nambimobile.widgets.efab.ExpandableFab
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            app:efab_color="#466CAA"
+            app:efab_orientation="portrait" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/logout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_color="#FFB74D"
+            app:fab_icon="@drawable/ic_logout"
+            app:fab_orientation="portrait"
+            app:label_text="Çıkış Yap" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/add_question"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_color="#FFB74D"
+            app:fab_icon="@drawable/ic_add"
+            app:fab_orientation="portrait"
+            app:label_text="Soru Ekle" />
+
+        <com.nambimobile.widgets.efab.FabOption
+            android:id="@+id/quiz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:fab_color="#FFB74D"
+            app:fab_icon="@drawable/ic_quiz"
+            app:fab_orientation="portrait"
+            app:label_text="Quiz Yap" />
+
+    </com.nambimobile.widgets.efab.ExpandableFabLayout>
+
+    <ProgressBar
+        android:id="@+id/pbHome"
+        style="?android:attr/progressBarStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnQuiz"
-        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/btnAdd"
-        android:text="Quiz"
-        />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

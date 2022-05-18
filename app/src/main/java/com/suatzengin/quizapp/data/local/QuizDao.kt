@@ -21,6 +21,9 @@ interface QuizDao {
     @Update
     suspend fun updateQuiz(quiz: Quiz)
 
+    @Query("SELECT * FROM quiz WHERE user_id = :id ORDER BY quiz_id ASC")
+    fun getQuiz(id: Int): List<Quiz>
+
     @Transaction
     @Query("SELECT * FROM question WHERE is_learned = 0 ORDER BY random() LIMIT 10  ")
     fun getQuestionsWithAnswers(): List<QuestionWithAnswers>

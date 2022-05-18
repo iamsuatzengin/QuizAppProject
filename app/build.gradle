@@ -66,8 +66,12 @@ dependencies {
     implementation "com.google.dagger:hilt-android:2.38.1"
     kapt "com.google.dagger:hilt-compiler:2.38.1"
 
-    def lottieVersion = "3.4.0"
+    // lottie for animations
+    def lottieVersion = "5.0.3"
     implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    //expandable floating action button
+    implementation 'com.nambimobile.widgets:expandable-fab:1.2.1'
 
     testImplementation 'junit:junit:4.13.2'
     androidTestImplementation 'androidx.test.ext:junit:1.1.3'

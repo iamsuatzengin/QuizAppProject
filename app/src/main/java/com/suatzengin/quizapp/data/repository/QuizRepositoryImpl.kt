@@ -37,4 +37,6 @@ class QuizRepositoryImpl @Inject constructor(
     override suspend fun insertQuiz(quiz: Quiz) = quizDao.insertQuiz(quiz)
 
     override suspend fun updateQuiz(quiz: Quiz) = quizDao.updateQuiz(quiz)
+
+    override fun getQuiz(id: Int): List<Quiz> = quizDao.getQuiz(id)
 }

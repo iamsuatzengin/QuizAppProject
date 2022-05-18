@@ -37,6 +37,9 @@
         <action
             android:id="@+id/actionToQuizFragment"
             app:destination="@id/quizFragment" />
+        <action
+            android:id="@+id/actionLoginFragment"
+            app:destination="@id/loginFragment" />
     </fragment>
     <fragment
         android:id="@+id/addQuestionFragment"
@@ -81,5 +84,8 @@
         <argument
             android:name="quiz"
             app:argType="com.suatzengin.quizapp.domain.model.Quiz" />
+        <action
+            android:id="@+id/actionResultToHome"
+            app:destination="@id/homeFragment" />
     </fragment>
 </navigation>

@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#466CAA"
     tools:context=".presentation.quiz.QuizFragment">
 
 
@@ -20,93 +19,3 @@
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
-<!--
-<TextView
-        android:id="@+id/tvQuestionText"
-        style="@style/TextAppearance.AppCompat.Body2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:background="@drawable/question_text_background"
-        android:gravity="center"
-        android:lineSpacingExtra="4dp"
-        android:padding="16dp"
-        android:text="Soru metni Soru metniSoru metni
-        Soru metniSoru metniSoru metniSoruSoru metniSoru metniSoru
-        metniSoru metniSoru metniSoru metni metniSoru metni"
-        android:textColor="@color/white"
-        android:textSize="16sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <RadioGroup
-        android:id="@+id/rgAnswers"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvQuestionText">
-
-        <RadioButton
-            android:id="@+id/radio_answerA"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@drawable/radio_group_selector"
-            android:buttonTint="@color/radioButtonTint"
-            android:padding="16dp"
-            android:text="deneme cevap 1 deneme cevap 1 "
-            android:textColor="@drawable/color_radio_button" />
-
-        <RadioButton
-            android:id="@+id/radio_answerB"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@drawable/radio_group_selector"
-            android:buttonTint="@color/radioButtonTint"
-            android:padding="16dp"
-            android:text="deneme cevap 2"
-            android:textColor="@drawable/color_radio_button" />
-
-        <RadioButton
-            android:id="@+id/radio_answerC"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@drawable/radio_group_selector"
-            android:buttonTint="@color/radioButtonTint"
-            android:padding="16dp"
-            android:text="deneme cevap 2"
-            android:textColor="@drawable/color_radio_button" />
-
-        <RadioButton
-            android:id="@+id/radio_answerD"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="8dp"
-            android:background="@drawable/radio_group_selector"
-            android:buttonTint="@color/radioButtonTint"
-            android:padding="16dp"
-            android:text="deneme cevap 3"
-            android:textColor="@drawable/color_radio_button" />
-    </RadioGroup>
-
-    <Button
-        android:id="@+id/btnNext"
-        style="@style/Widget.MaterialComponents.Button"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:backgroundTint="@color/colorTextPrimary"
-        android:text="Sonraki"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/rgAnswers" />
-
--->

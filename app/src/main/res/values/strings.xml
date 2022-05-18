@@ -12,6 +12,16 @@
     <string name="other_answer3">Cevap 3</string>
     <string name="other_answer4">Cevap 4</string>
     <string name="btn_add">Ekle</string>
-    <string name="log_out">Çıkış yap</string>
+    <string name="log_out">Çıkış Yap</string>
     <string name="ana_sayfa">Ana Sayfa</string>
+    <string name="total_wrong_str">Toplam Yanlış Sayısı:</string>
+    <string name="total_correct_str">Toplam Doğru Sayısı:</string>
+    <string name="total_score_str">Toplam Puan:</string>
+    <string name="add_question_title">Cevap Ekle</string>
+    <string name="is_correct_str">Doğru mu?</string>
+    <string name="back_str">Geri Dön</string>
+    <string name="next_btn_str">Sonraki</string>
+    <string name="congrats">Tebrikler</string>
+    <string name="nice_try">Daha iyi olabilirdi</string>
+
 </resources>

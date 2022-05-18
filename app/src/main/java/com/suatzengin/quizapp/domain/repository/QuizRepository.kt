@@ -24,4 +24,6 @@ interface QuizRepository {
     suspend fun insertQuiz(quiz: Quiz)
 
     suspend fun updateQuiz(quiz: Quiz)
+
+    fun getQuiz(id: Int): List<Quiz>
 }
